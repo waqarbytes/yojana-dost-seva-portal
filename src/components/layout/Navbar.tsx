@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -17,11 +18,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useToast } from "@/components/ui/use-toast";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState<'english' | 'hindi'>('english');
+  const [isVoiceActive, setIsVoiceActive] = useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,6 +42,30 @@ const Navbar = () => {
 
   const toggleLanguage = () => {
     setCurrentLanguage(currentLanguage === 'english' ? 'hindi' : 'english');
+  };
+
+  const toggleVoiceAssistant = () => {
+    setIsVoiceActive(!isVoiceActive);
+    
+    if (!isVoiceActive) {
+      toast({
+        title: "Voice Assistant Activated",
+        description: "I'm listening. How can I help you today?",
+      });
+      // This would be where actual voice recognition would be implemented
+      setTimeout(() => {
+        toast({
+          title: "Voice Command Received",
+          description: "Navigating to services page as requested.",
+        });
+        setIsVoiceActive(false);
+      }, 5000);
+    } else {
+      toast({
+        title: "Voice Assistant Deactivated",
+        description: "Voice assistant is now turned off.",
+      });
+    }
   };
 
   return (
@@ -110,7 +138,8 @@ const Navbar = () => {
           <Button 
             variant="ghost" 
             size="icon"
-            className="text-gov-blue hover:text-gov-orange"
+            className={`text-gov-blue ${isVoiceActive ? 'bg-red-100 text-red-600' : 'hover:text-gov-orange'}`}
+            onClick={toggleVoiceAssistant}
           >
             <Mic className="h-5 w-5" />
           </Button>
@@ -118,17 +147,23 @@ const Navbar = () => {
           <Button 
             variant="outline"
             className="flex items-center space-x-2 border-gov-blue text-gov-blue hover:bg-gov-blue hover:text-white"
+            asChild
           >
-            <LogIn className="h-4 w-4" />
-            <span>Login</span>
+            <Link to="/login">
+              <LogIn className="h-4 w-4 mr-2" />
+              <span>Login</span>
+            </Link>
           </Button>
 
           <Button 
             variant="default"
             className="flex items-center space-x-2 bg-gov-blue text-white hover:bg-gov-blue/90"
+            asChild
           >
-            <UserPlus className="h-4 w-4" />
-            <span>Sign Up</span>
+            <Link to="/signup">
+              <UserPlus className="h-4 w-4 mr-2" />
+              <span>Sign Up</span>
+            </Link>
           </Button>
         </div>
 
@@ -198,19 +233,34 @@ const Navbar = () => {
             </Button>
 
             <Button 
+              variant="ghost"
+              className={`w-full flex items-center justify-center ${isVoiceActive ? 'bg-red-100 text-red-600' : ''}`}
+              onClick={toggleVoiceAssistant}
+            >
+              <Mic className="h-5 w-5 mr-2" />
+              {isVoiceActive ? 'Stop Voice Assistant' : 'Start Voice Assistant'}
+            </Button>
+
+            <Button 
               variant="outline"
               className="w-full flex items-center justify-center space-x-2 border-gov-blue text-gov-blue hover:bg-gov-blue hover:text-white"
+              asChild
             >
-              <LogIn className="h-4 w-4" />
-              <span>Login</span>
+              <Link to="/login">
+                <LogIn className="h-4 w-4 mr-2" />
+                <span>Login</span>
+              </Link>
             </Button>
 
             <Button 
               variant="default"
               className="w-full flex items-center justify-center space-x-2 bg-gov-blue text-white hover:bg-gov-blue/90"
+              asChild
             >
-              <UserPlus className="h-4 w-4" />
-              <span>Sign Up</span>
+              <Link to="/signup">
+                <UserPlus className="h-4 w-4 mr-2" />
+                <span>Sign Up</span>
+              </Link>
             </Button>
           </div>
         </div>

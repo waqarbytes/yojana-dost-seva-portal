@@ -14,6 +14,8 @@ import Eligibility from "./pages/Eligibility";
 import NotFound from "./pages/NotFound";
 import CentralServices from "./pages/CentralServices";
 import StateServices from "./pages/StateServices";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/layout/ScrollToTop";
@@ -37,6 +39,8 @@ const App = () => (
           <Route path="/schemes" element={<Schemes />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/eligibility" element={<Eligibility />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
