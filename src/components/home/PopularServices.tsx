@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { 
-  Health, 
-  Education, 
+  Stethoscope,   // Replaced 'Health'
+  School,        // Replaced 'Education'
   Home, 
   Settings,
   File 
@@ -23,7 +22,7 @@ const services: ServiceItem[] = [
   {
     id: '1',
     title: 'Ayushman Bharat',
-    icon: <Health className="h-10 w-10 text-gov-teal" />,
+    icon: <Stethoscope className="h-10 w-10 text-gov-teal" />,
     url: '/services/ayushman-bharat',
     type: 'popular'
   },
@@ -37,7 +36,7 @@ const services: ServiceItem[] = [
   {
     id: '3',
     title: 'National Scholarship Portal',
-    icon: <Education className="h-10 w-10 text-gov-teal" />,
+    icon: <School className="h-10 w-10 text-gov-teal" />,
     url: '/services/scholarship',
     type: 'popular'
   },
@@ -79,7 +78,7 @@ const services: ServiceItem[] = [
   {
     id: '9',
     title: 'COVID Certificate',
-    icon: <Health className="h-10 w-10 text-gov-teal" />,
+    icon: <Stethoscope className="h-10 w-10 text-gov-teal" />,
     url: '/services/covid',
     type: 'trending'
   },
@@ -93,7 +92,7 @@ const services: ServiceItem[] = [
   {
     id: '11',
     title: 'Skill Development',
-    icon: <Education className="h-10 w-10 text-gov-teal" />,
+    icon: <School className="h-10 w-10 text-gov-teal" />,
     url: '/services/skill',
     type: 'trending'
   },

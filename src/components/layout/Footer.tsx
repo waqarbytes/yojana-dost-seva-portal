@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -6,7 +5,7 @@ import {
   Book,
   Settings, 
   Link as LinkIcon,
-  InvertColors,
+  RefreshCcw,
   Facebook,
   Youtube,
   Instagram,
@@ -203,7 +202,7 @@ const Footer = () => {
               className={`flex flex-col items-center justify-center h-auto py-3 ${accessibilitySettings.invertColors ? 'bg-gov-teal text-white' : 'text-white hover:bg-white/20'}`}
               onClick={toggleInvertColors}
             >
-              <InvertColors className="mb-2" size={24} />
+              <RefreshCcw className="mb-2" size={24} />
               <span className="text-xs">Invert Colors</span>
             </Button>
 

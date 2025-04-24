@@ -1,12 +1,11 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
   Home, 
-  Health, 
+  Stethoscope, 
   Contact,
-  Education
+  School
 } from 'lucide-react';
 
 interface Category {
@@ -31,7 +30,7 @@ const categories: Category[] = [
     id: 'health',
     name: 'Health & Wellness',
     description: 'Healthcare schemes, insurance, and medical services',
-    icon: <Health className="h-10 w-10" />,
+    icon: <Stethoscope className="h-10 w-10" />,
     url: '/categories/health',
     color: 'bg-green-50 text-green-600'
   },
@@ -63,7 +62,7 @@ const categories: Category[] = [
     id: 'education',
     name: 'Education & Employment',
     description: 'Scholarships, skill development, and job opportunities',
-    icon: <Education className="h-10 w-10" />,
+    icon: <School className="h-10 w-10" />,
     url: '/categories/education',
     color: 'bg-orange-50 text-orange-600'
   }
