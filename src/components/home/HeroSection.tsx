@@ -18,7 +18,7 @@ const slides: HeroSlide[] = [
     id: 1,
     title: "Find Schemes That Match Your Needs",
     description: "Yojana Dost helps you discover government schemes you're eligible for with our easy eligibility checker.",
-    image: "22.webp",
+    image: "1.jpeg",
     buttonText: "Check Eligibility",
     buttonLink: "/eligibility"
   },
@@ -26,7 +26,7 @@ const slides: HeroSlide[] = [
     id: 2,
     title: "Over 5000+ Government Schemes",
     description: "Access central and state government schemes across different categories all in one place.",
-    image: "6537.webp",
+    image: "2.jpeg",
     buttonText: "Explore Schemes",
     buttonLink: "/schemes"
   },
@@ -34,7 +34,7 @@ const slides: HeroSlide[] = [
     id: 3,
     title: "Digital Services Made Simple",
     description: "Apply online for government services and schemes from the comfort of your home.",
-    image: "111.webp",
+    image: "3.jpeg",
     buttonText: "Get Started",
     buttonLink: "/services"
   }
