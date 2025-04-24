@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -7,7 +6,10 @@ import {
   Search, 
   Menu, 
   X, 
-  ChevronDown
+  ChevronDown,
+  LogIn,
+  UserPlus,
+  Mic
 } from "lucide-react";
 import { 
   DropdownMenu,
@@ -45,7 +47,6 @@ const Navbar = () => {
       }`}
     >
       <div className="gov-container flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <div className="bg-gov-blue p-2 rounded-md">
             <span className="text-white font-bold">YD</span>
@@ -55,7 +56,6 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
           <Link to="/" className="text-gov-blue hover:text-gov-orange font-medium transition-colors">
             <span className="flex items-center"><Home size={16} className="mr-1" /> Home</span>
@@ -89,7 +89,6 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        {/* Actions */}
         <div className="hidden lg:flex items-center space-x-4">
           <div className="relative">
             <input
@@ -107,9 +106,32 @@ const Navbar = () => {
           >
             {currentLanguage === 'english' ? 'हिंदी' : 'English'}
           </Button>
+
+          <Button 
+            variant="ghost" 
+            size="icon"
+            className="text-gov-blue hover:text-gov-orange"
+          >
+            <Mic className="h-5 w-5" />
+          </Button>
+
+          <Button 
+            variant="outline"
+            className="flex items-center space-x-2 border-gov-blue text-gov-blue hover:bg-gov-blue hover:text-white"
+          >
+            <LogIn className="h-4 w-4" />
+            <span>Login</span>
+          </Button>
+
+          <Button 
+            variant="default"
+            className="flex items-center space-x-2 bg-gov-blue text-white hover:bg-gov-blue/90"
+          >
+            <UserPlus className="h-4 w-4" />
+            <span>Sign Up</span>
+          </Button>
         </div>
 
-        {/* Mobile Menu Button */}
         <button 
           className="lg:hidden text-gov-blue p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -118,7 +140,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white shadow-lg py-4 absolute w-full z-50">
           <div className="gov-container flex flex-col space-y-4">
@@ -174,6 +195,22 @@ const Navbar = () => {
               onClick={toggleLanguage}
             >
               {currentLanguage === 'english' ? 'हिंदी' : 'English'}
+            </Button>
+
+            <Button 
+              variant="outline"
+              className="w-full flex items-center justify-center space-x-2 border-gov-blue text-gov-blue hover:bg-gov-blue hover:text-white"
+            >
+              <LogIn className="h-4 w-4" />
+              <span>Login</span>
+            </Button>
+
+            <Button 
+              variant="default"
+              className="w-full flex items-center justify-center space-x-2 bg-gov-blue text-white hover:bg-gov-blue/90"
+            >
+              <UserPlus className="h-4 w-4" />
+              <span>Sign Up</span>
             </Button>
           </div>
         </div>
