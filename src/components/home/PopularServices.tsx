@@ -2,13 +2,13 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { Tab, Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { 
   Health, 
   Education, 
-  Travel, 
-  Dashboard,
-  Schemes 
+  Home, 
+  Settings,
+  File 
 } from 'lucide-react';
 
 interface ServiceItem {
@@ -30,7 +30,7 @@ const services: ServiceItem[] = [
   {
     id: '2',
     title: 'PM Kisan',
-    icon: <Schemes className="h-10 w-10 text-gov-teal" />,
+    icon: <File className="h-10 w-10 text-gov-teal" />,
     url: '/services/pm-kisan',
     type: 'popular'
   },
@@ -44,35 +44,35 @@ const services: ServiceItem[] = [
   {
     id: '4',
     title: 'Driving License',
-    icon: <Travel className="h-10 w-10 text-gov-teal" />,
+    icon: <Home className="h-10 w-10 text-gov-teal" />,
     url: '/services/driving-license',
     type: 'popular'
   },
   {
     id: '5',
     title: 'PM Awas Yojana',
-    icon: <Dashboard className="h-10 w-10 text-gov-teal" />,
+    icon: <Settings className="h-10 w-10 text-gov-teal" />,
     url: '/services/pm-awas-yojana',
     type: 'popular'
   },
   {
     id: '6',
     title: 'Birth Certificate',
-    icon: <Dashboard className="h-10 w-10 text-gov-teal" />,
+    icon: <Settings className="h-10 w-10 text-gov-teal" />,
     url: '/services/birth-certificate',
     type: 'popular'
   },
   {
     id: '7',
     title: 'Income Certificate',
-    icon: <Dashboard className="h-10 w-10 text-gov-teal" />,
+    icon: <Settings className="h-10 w-10 text-gov-teal" />,
     url: '/services/income-certificate',
     type: 'trending'
   },
   {
     id: '8',
     title: 'Pension Services',
-    icon: <Dashboard className="h-10 w-10 text-gov-teal" />,
+    icon: <Settings className="h-10 w-10 text-gov-teal" />,
     url: '/services/pension',
     type: 'trending'
   },
@@ -86,7 +86,7 @@ const services: ServiceItem[] = [
   {
     id: '10',
     title: 'E-Shram Card',
-    icon: <Dashboard className="h-10 w-10 text-gov-teal" />,
+    icon: <Settings className="h-10 w-10 text-gov-teal" />,
     url: '/services/e-shram',
     type: 'trending'
   },
@@ -100,7 +100,7 @@ const services: ServiceItem[] = [
   {
     id: '12',
     title: 'National Pension Scheme',
-    icon: <Dashboard className="h-10 w-10 text-gov-teal" />,
+    icon: <Settings className="h-10 w-10 text-gov-teal" />,
     url: '/services/nps',
     type: 'trending'
   }

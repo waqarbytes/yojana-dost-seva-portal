@@ -3,9 +3,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
-  Travel, 
+  Home, 
   Health, 
-  Police,
+  Contact,
   Education
 } from 'lucide-react';
 
@@ -23,7 +23,7 @@ const categories: Category[] = [
     id: 'travel',
     name: 'Travel',
     description: 'Passport, visa, and international travel services',
-    icon: <Travel className="h-10 w-10" />,
+    icon: <Home className="h-10 w-10" />,
     url: '/categories/travel',
     color: 'bg-blue-50 text-blue-600'
   },
@@ -39,7 +39,7 @@ const categories: Category[] = [
     id: 'police',
     name: 'Police & Legal',
     description: 'Police verification, legal aid, and judicial services',
-    icon: <Police className="h-10 w-10" />,
+    icon: <Contact className="h-10 w-10" />,
     url: '/categories/police',
     color: 'bg-red-50 text-red-600'
   },

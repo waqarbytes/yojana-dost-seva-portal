@@ -3,10 +3,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { 
-  TextToSpeech,
-  IncreaseTextSize, 
-  LineHeight,
-  HighlightLinks,
+  Book,
+  Settings, 
+  Link as LinkIcon,
   InvertColors,
   Facebook,
   Youtube,
@@ -103,7 +102,7 @@ const Footer = () => {
               className="flex flex-col items-center justify-center h-auto py-3 text-white hover:bg-white/20"
               onClick={textToSpeech}
             >
-              <TextToSpeech className="mb-2" size={24} />
+              <Book className="mb-2" size={24} />
               <span className="text-xs">Text to Speech</span>
             </Button>
 
@@ -113,7 +112,7 @@ const Footer = () => {
                   variant="ghost" 
                   className="flex flex-col items-center justify-center h-auto py-3 text-white hover:bg-white/20"
                 >
-                  <IncreaseTextSize className="mb-2" size={24} />
+                  <Settings className="mb-2" size={24} />
                   <span className="text-xs">Text Size</span>
                 </Button>
               </PopoverTrigger>
@@ -150,7 +149,7 @@ const Footer = () => {
                   variant="ghost" 
                   className="flex flex-col items-center justify-center h-auto py-3 text-white hover:bg-white/20"
                 >
-                  <LineHeight className="mb-2" size={24} />
+                  <Settings className="mb-2" size={24} />
                   <span className="text-xs">Line Height</span>
                 </Button>
               </PopoverTrigger>
@@ -186,7 +185,7 @@ const Footer = () => {
               className={`flex flex-col items-center justify-center h-auto py-3 ${accessibilitySettings.highlightLinks ? 'bg-gov-teal text-white' : 'text-white hover:bg-white/20'}`}
               onClick={toggleHighlightLinks}
             >
-              <HighlightLinks className="mb-2" size={24} />
+              <LinkIcon className="mb-2" size={24} />
               <span className="text-xs">Highlight Links</span>
             </Button>
 

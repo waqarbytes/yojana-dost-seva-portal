@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { AppStore, PlayStore } from 'lucide-react';
+import { Book, Image } from 'lucide-react';
 
 const AppPromotion = () => {
   return (
@@ -18,7 +18,7 @@ const AppPromotion = () => {
               asChild
             >
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <AppStore className="mr-2 h-6 w-6" />
+                <Image className="mr-2 h-6 w-6" />
                 <div className="flex flex-col items-start">
                   <span className="text-xs">Download on the</span>
                   <span className="text-lg font-medium">App Store</span>
@@ -30,7 +30,7 @@ const AppPromotion = () => {
               asChild
             >
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <PlayStore className="mr-2 h-6 w-6" />
+                <Book className="mr-2 h-6 w-6" />
                 <div className="flex flex-col items-start">
                   <span className="text-xs">Get it on</span>
                   <span className="text-lg font-medium">Google Play</span>
