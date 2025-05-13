@@ -1,26 +1,13 @@
-
-import React from 'react';
-import HeroSection from '@/components/home/HeroSection';
-import LiveStats from '@/components/home/LiveStats';
-import WhatsNewSection from '@/components/home/WhatsNewSection';
-import PopularServices from '@/components/home/PopularServices';
-import StateServices from '@/components/home/StateServices';
-import BenefitsSection from '@/components/home/BenefitsSection';
-import CategoriesSection from '@/components/home/CategoriesSection';
-import AppPromotion from '@/components/home/AppPromotion';
+// Update this page (the content is just a fallback if you fail to update the page)
 
 const Index = () => {
   return (
-    <main>
-      <HeroSection />
-      <LiveStats />
-      <WhatsNewSection />
-      <PopularServices />
-      <StateServices />
-      <BenefitsSection />
-      <CategoriesSection />
-      <AppPromotion />
-    </main>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
+        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+      </div>
+    </div>
   );
 };
 
